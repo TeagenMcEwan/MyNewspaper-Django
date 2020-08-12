@@ -12,6 +12,7 @@
     <div id="story-content">
         <img src="{% static '/news/images/placeholder-5.jpg' %}">
         {{ story.content|linebreaks }}
+        <a href="{% url 'news:deleteStory' story.id %}">Delete Story</a>
     </div>
 </div>
 
