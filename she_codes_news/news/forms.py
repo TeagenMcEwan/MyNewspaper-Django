@@ -3,13 +3,23 @@ from django.forms import ModelForm
 from .models import NewsStory
 # from django.contrib.auth.mixins import LoginRequiredMixin
 
-
-
 class StoryForm(ModelForm):
     class Meta:
         model = NewsStory
-        fields = ['title', 'pub_date', 'content', 'author', 'image']
+        fields = ['title', 'author', 'pub_date', 'content', 'image']
         widgets = {
+            'title': forms.TextInput(
+                attrs={
+                    'class':'form',
+                    'placeholder': 'Text Here',
+                }
+            ),
+            'author': forms.TextInput(
+                attrs={
+                    'class': 'form',
+                    'placeholder': 'Text Here',
+                }
+            ),
             'pub_date': forms.DateInput(
                 format=('%m/%d/%Y'),
                 attrs={
@@ -18,26 +28,12 @@ class StoryForm(ModelForm):
                     'type': 'date',
                 }
             ),
-            'title': forms.TextInput(
-                attrs={
-                    'class':'form',
-                    'placeholder': 'Text Here',
-                }
-            ),
             'content': forms.TextInput(
                 attrs={
                     'class':'form',
-                    'placeholder': 'Text Here',
+                    'placeholder': 'Start your story here',
                 }
             ),
-
-            'author': forms.TextInput(
-                attrs={
-                    'class': 'form',
-                    'placeholder': 'Text Here',
-                }
-            ),
-
             'image': forms.TextInput(
                 attrs={
                     'class':'form',
@@ -47,7 +43,7 @@ class StoryForm(ModelForm):
             'button': forms.TextInput(
                 attrs={
                     'class':'form',
-                    'placeholder': 'Text Here',
+                    'placeholder': 'Submit',
                 }
             ),
         }

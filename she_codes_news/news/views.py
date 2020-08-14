@@ -12,7 +12,9 @@ class AddStoryView(LoginRequiredMixin, generic.CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user 
+        
         return super().form_valid(form)
+
 
 class IndexView(generic.ListView):
     template_name = 'news/index.html'
@@ -28,10 +30,12 @@ class IndexView(generic.ListView):
 
         return context
 
+
 class StoryView(generic.DetailView):
     model = NewsStory
     template_name = 'news/story.html'
     context_object_name = 'story'
+
 
 class DeleteStoryView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     login_url = 'users/login/'
@@ -39,12 +43,13 @@ class DeleteStoryView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVie
     template_name = 'news/delete-story.html'
     success_url = reverse_lazy('news:index')
 
-    def test_func(self):
-        obj = self.get_object()
+    def test_func(self,  **kwargs):
+        obj = self.get_object(**kwargs)
+        
         return obj.author == self.request.user
 
 
-class UpdateStoryView(LoginRequiredMixin, generic.UpdateView):
+class UpdateStoryView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
     login_url = 'users/login/'
     model = NewsStory
     form_class=StoryForm
@@ -53,4 +58,10 @@ class UpdateStoryView(LoginRequiredMixin, generic.UpdateView):
     def get_success_url(self):
         pk=self.kwargs['pk']
         success_url = reverse_lazy('news:story', kwargs={'pk':pk})
+        
         return success_url
+
+    def test_func(self):
+        obj = self.get_object()
+        
+        return obj.author == self.request.user

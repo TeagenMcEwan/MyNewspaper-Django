@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'user/styles.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -11,6 +11,7 @@
     <h4>{{ users.first_name }}</h4>
     <h4>{{ users.last_name }}</h4>
     <h4>{{ users.email }}</h4>
+    <!-- insert image -->
 </div>
 
 {% endblock %}
