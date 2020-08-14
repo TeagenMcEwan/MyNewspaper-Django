@@ -19,26 +19,39 @@ img {
 }
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Lemonada', cursive;
     text-decoration: none;
-    font-size: 4rem;
-    margin: 0;
-    text-align: center;
+    font-size: 80px;
+    text-align: center; 
+    margin: 0px;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+   /* font-family: 'Montserrat Subrayada', sans-serif;  */
+   font-family: 'Lemonada', cursive;
+   font-size: 55px;
+   padding-left: 15px; 
+   text-align: center; 
+   margin: 2px; 
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 25px;
     margin: 0;
+    justify-content: center;
+    text-align: center; 
+}
+
+h4 {
+    font-family: 'Lemonada', cursive;
+    font-size: 16px;
+    padding-left: 15px; 
+    text-align: center; 
 }
 
 #header-text {
-    flex-basis: 80%;
-    /* display: inline-flex;
-    justify-content: center; */
+    flex-basis: 100%;
+    display: inline-flex;
     justify-content: center;
     text-align: center; 
     padding: 25px; 
@@ -48,8 +61,8 @@ nav {
     flex-basis: 20%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding: 25px; 
+    text-align: right;
+    padding: 15px; 
     font-size: 16px; 
 }
 
@@ -60,8 +73,9 @@ a {
 }
 
 a, p {
-    font-family: monospace;
+    font-family: 'Lemonada', cursive;
     font-size: 14px;
+    margin: 2px;
 }
 
 form {
@@ -70,59 +84,13 @@ form {
     align-items: center;
     padding: 5px; 
     margin: 50px auto;
-    /* width: 100%;  */
+    width: 100%; 
 }
 
 div.userprofile {
+    font-family: 'Lemonada', cursive;
     font-size: 20px; 
     text-align: center;
-    margin: 20px auto;
+    margin: 0px auto;
     width: 90%; 
-    padding-top: 50px;
 }
-
-
-/* 
-.form-item label {
-    flex-basis: 150px;
-    font-size: 22px;
-} */
-
-/* .form-item input,
-.form-item textarea {
-    flex-basis: 50%;
-    border: 2.5px solid #40D2F7;
-} */
-
-/* .form-item input:hover,
-.form-item textarea:hover {
-    border: 2.5px solid #40D2F7;
-}
-
-.form-item input,
-.form-item textarea,
-.form-item button {
-    border: 2.5px solid #40D2F7;
-    background-color: #f7ec72;
-    padding: 5px;
-    font-size: 18px;
-} */
-
-/* .form-item button:hover {
-    border: 2.5px solid #40D2F7;
-    background-color: #f7ec72;
-    color: #F75990;
-} */
-
-/* .form-item button {
-    width: 100px;
-} */
-/* 
-.form-item input,
-.form-item textarea,
-.form-item button {
-    border: 2.5px solid #40D2F7;
-    background-color: #f7ec72;
-    padding: 5px;
-    font-size: 18px;
-} */

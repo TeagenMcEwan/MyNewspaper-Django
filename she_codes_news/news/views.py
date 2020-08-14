@@ -44,6 +44,11 @@ class AuthorView(generic.DetailView):
     template_name = 'news/author.html'
     context_object_name = 'author'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['latest_stories'] = NewsStory.objects.order_by('author')[:3]
+        context['all_stories'] = NewsStory.objects.order_by('author')
+
 
 class DeleteStoryView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     login_url = 'users/login/'
