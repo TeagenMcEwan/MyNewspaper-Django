@@ -7,27 +7,17 @@
 
 {% block content %}
 <div id="story-wrapper">
-    <img src="{% static '/user/images/TeagenM.jpg' %}">
-    <img src="{% static '/user/images/Cherry_Blossom.jpg' %}">
-    <img src="{% static '/user/images/Delila_Daffodill.jpg' %}">
-    <img src="{% static '/user/images/Peach_Lilies.jpg' %}">
-    <img src="{% static '/user/images/Rose_Petals.jpg' %}">
-    <h2>{{ users.username }}</h2>
-    <h4>{{ users.first_name }}</h4>
-    <h4>{{ users.last_name }}</h4>
-    <h4>{{ users.email }}</h4>
+    <div class="userprofile">
+        <img src="{% static '/user/images/TeagenM.jpg' %}">
+        <!-- <img src="{% static '/user/images/Cherry_Blossom.jpg' %}">
+        <img src="{% static '/user/images/Delila_Daffodill.jpg' %}">
+        <img src="{% static '/user/images/Peach_Lilies.jpg' %}">
+        <img src="{% static '/user/images/Rose_Petals.jpg' %}"> -->
+        <h2>{{ users.username }}</h2>
+        <h4>First Name: {{ users.first_name }}</h4>
+        <h4>Surname: {{ users.last_name }}</h4>
+        <h4>Contact: {{ users.email }}</h4>
     </div>
 </div>
 
 {% endblock %}
-
-<!-- <div id="story-wrapper">
-    <h2>{{ story.title }}</h2>
-    <h4>{{ story.author }}</h4>
-    <div id="story-content">
-        <img src="{% static '/news/images/placeholder-5.jpg' %}">
-        {{ story.content|linebreaks }}
-        <a href="{% url 'news:deleteStory' story.id %}">Delete Story</a>
-        <a href="{% url 'news:updateStory' story.id %}">Update Story</a>
-    </div>
-</div> -->

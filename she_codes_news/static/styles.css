@@ -37,8 +37,10 @@ h3 {
 
 #header-text {
     flex-basis: 80%;
-    display: inline-flex;
+    /* display: inline-flex;
+    justify-content: center; */
     justify-content: center;
+    text-align: center; 
     padding: 25px; 
 }
 
@@ -59,19 +61,27 @@ a {
 
 a, p {
     font-family: monospace;
+    font-size: 14px;
 }
 
 form {
-    margin: 50px auto;
-    width: 100%; 
-}
-
-/* .form-item {
     display: flex;
-    justify-content: center; 
+    flex-direction: column; 
     align-items: center;
     padding: 5px; 
-} */
+    margin: 50px auto;
+    /* width: 100%;  */
+}
+
+div.userprofile {
+    font-size: 20px; 
+    text-align: center;
+    margin: 20px auto;
+    width: 90%; 
+    padding-top: 50px;
+}
+
+
 /* 
 .form-item label {
     flex-basis: 150px;
