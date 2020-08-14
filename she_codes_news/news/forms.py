@@ -6,17 +6,11 @@ from .models import NewsStory
 class StoryForm(ModelForm):
     class Meta:
         model = NewsStory
-        fields = ['title', 'author', 'pub_date', 'content', 'image']
+        fields = ['title', 'pub_date', 'content', 'image']
         widgets = {
             'title': forms.TextInput(
                 attrs={
                     'class':'form',
-                    'placeholder': 'Text Here',
-                }
-            ),
-            'author': forms.TextInput(
-                attrs={
-                    'class': 'form',
                     'placeholder': 'Text Here',
                 }
             ),

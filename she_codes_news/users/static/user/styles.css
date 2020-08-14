@@ -1,15 +1,11 @@
 /* # This will style my login pages */
 
-div.userprofile {
-background-color: ;
-}
-
-form {
+/* form {
     margin: 30px auto;
     width: 90%; 
-}
+} */
 
-.form-item {
+/* .form-item {
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -47,11 +43,5 @@ form {
     color: #F75990;
 }
 
-.form-item button {
-    width: 100px;
-}
 
-.form-delete button {
-    width: 100px;
-}
-)
+

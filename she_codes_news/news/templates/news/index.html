@@ -7,7 +7,7 @@
 
     <!-- {% block content %} -->
     {% if user.is_authenticated %}
-        <a href="{% url 'news:newsStory' %}">Write New Story</a>
+        <a href="{% url 'news:newsStory' %}">Create a New Story</a>
     {% endif %} 
         <h2>Latest News</h2>
 
@@ -30,5 +30,17 @@
             <p>No stories are available.</p>
         {% endif %}
     </div>
+
+    <div id="all-stories">
+        {% if author_stories %}
+            {% for story in author.published_stories.all %}
+                {% include "./storyCard.html" with story=story %}
+        {% endfor %}
+    {% else %}
+        <p>No stories are available.</p>
+    {% endif %}
+
+    </div>
+
 
     {% endblock %}

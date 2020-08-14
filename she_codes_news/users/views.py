@@ -15,4 +15,4 @@ class UserView(generic.DetailView):
     model = CustomUser
     template_name = 'users/userprofile.html'
     context_object_name = 'users'
-
+    
